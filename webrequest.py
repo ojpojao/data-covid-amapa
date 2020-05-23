@@ -19,7 +19,7 @@ __author__ = "ojpojao"
 __version__ = "0.1"
 __email__ = "ojpojao@gmail.com"
 
-# download_csv() function is a sample from @RealPython: https://realpython.com/python-requests/
+# download_csv() function is a sample from @realpython: https://realpython.com/python-requests/
 def download_csv(url, headers):
     try:
         response = requests.get(url, headers=headers)
