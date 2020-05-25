@@ -20,40 +20,47 @@ __version__ = "0.1"
 __email__ = "ojpojao@gmail.com"
 
 # download_csv() function is a sample from @realpython: https://realpython.com/python-requests/
+
+
 def download_csv(url, headers):
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
 
-    except  HTTPError as http_err:
+    except HTTPError as http_err:
         print(f"Erro HTTP: {http_err}")
-    except  Exception as err:
+    except Exception as err:
         print(f"Erro: {err}")
     else:
         print(f"Getting newfile!!!!!")
     return response
 
+
 def file_exists(file):
     return path.exists(file)
 
+
 def file_path(file):
     return path.abspath(file)
+
 
 def salve_file(content, name="microdados.csv"):
     with open(name, 'wb') as f:
         f.write(content)
     return name
 
+
 def md5sum(file):
     with open(file, 'rb') as f:
         md5sum = hashlib.md5(f.read()).hexdigest()
     return md5sum
 
+
 def main():
-    
+
     url = "http://painel.corona.ap.gov.br/dados/microdados.csv"
     current_file = "microdados.csv"
-    headers = {"Content-Type":"text/csv"}
+    headers = {"Content-Type": "text/csv"}
 
     raw_requests = download_csv(url, headers)
 
@@ -79,13 +86,14 @@ def main():
             print("Current File REMOVED!")
             rename(newfile, current_file)
             print(f"{newfile} renamed to {current_file}")
-        
+
         time.sleep(2.5)
 
         if file_exists(newfile):
             remove(newfile)
         print("Success!!!")
 
+
 if __name__ == "__main__":
-    main()   
+    main()
 
