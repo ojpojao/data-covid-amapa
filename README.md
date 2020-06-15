@@ -1,5 +1,5 @@
 # data-covid-amapa
-Download microdados.csv about covid-19 from http://painel.corona.ap.gov.br/dados/microdados.csv in the state of Amapá, Brazil.
+Download microdados.csv file about covid-19 from http://painel.corona.ap.gov.br/dados/microdados.csv in the state of Amapá, Brazil.
 
 
 This code downloads the file "microdados.csv" which contains information about COVID-19 in the state of Amapá, Brazil. 
