@@ -25,4 +25,4 @@ names = ["Data", "Municipio", "Municipio_COD", "SEXO", "BAIRRO", "IDADE", "FAIXA
 df = pd.read_csv(filepath_or_buffer=file, encoding=encoding, names=names)
 df.drop(index=0, inplace=True)
 ```
-**Remember that in this repository there is no analysis about the dataframe.**
+**Pay ATTENTION: this repository there is no analysis about the dataframe.**
